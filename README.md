@@ -1,3 +1,3 @@
 # NetworkDetector
 
-iOS 客户端网路诊断方案
+iOS 客户端网络诊断方案
