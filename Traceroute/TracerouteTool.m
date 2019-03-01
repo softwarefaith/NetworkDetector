@@ -36,33 +36,6 @@ typedef struct IPv6Header {
     // data
 } IPv6Header;
 
-// IPv4Header编译期检查
-__Check_Compile_Time(sizeof(IPv4Header) == 20);
-__Check_Compile_Time(offsetof(IPv4Header, versionAndHeaderLength) == 0);
-__Check_Compile_Time(offsetof(IPv4Header, serviceType) == 1);
-__Check_Compile_Time(offsetof(IPv4Header, totalLength) == 2);
-__Check_Compile_Time(offsetof(IPv4Header, identifier) == 4);
-__Check_Compile_Time(offsetof(IPv4Header, flagsAndFragmentOffset) == 6);
-__Check_Compile_Time(offsetof(IPv4Header, timeToLive) == 8);
-__Check_Compile_Time(offsetof(IPv4Header, protocol) == 9);
-__Check_Compile_Time(offsetof(IPv4Header, checksum) == 10);
-__Check_Compile_Time(offsetof(IPv4Header, sourceAddress) == 12);
-__Check_Compile_Time(offsetof(IPv4Header, destAddress) == 16);
-__Check_Compile_Time(sizeof(ICMPPacket) == 8);
-__Check_Compile_Time(offsetof(ICMPPacket, type) == 0);
-__Check_Compile_Time(offsetof(ICMPPacket, code) == 1);
-__Check_Compile_Time(offsetof(ICMPPacket, checksum) == 2);
-__Check_Compile_Time(offsetof(ICMPPacket, identifier) == 4);
-__Check_Compile_Time(offsetof(ICMPPacket, sequenceNumber) == 6);
-
-// IPv6Header编译期检查
-__Check_Compile_Time(offsetof(IPv6Header, padding) == 0);
-__Check_Compile_Time(offsetof(IPv6Header, payloadLength) == 4);
-__Check_Compile_Time(offsetof(IPv6Header, nextHeader) == 6);
-__Check_Compile_Time(offsetof(IPv6Header, hopLimit) == 7);
-__Check_Compile_Time(offsetof(IPv6Header, sourceAddress) == 8);
-__Check_Compile_Time(offsetof(IPv6Header, destAddress) == 24);
-
 @implementation TracerouteTool
 
 #pragma mark - Public
